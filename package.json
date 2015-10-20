@@ -1,6 +1,6 @@
 {
   "name": "zlatan",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Zlatan randomizer",
   "main": "index.js",
   "scripts": {
@@ -11,12 +11,17 @@
     "url": "git+https://github.com/viktorgardart/zlatan.git"
   },
   "keywords": [
-    "zlatan"
+    "zlatan",
+    "randomizer"
   ],
   "author": "Viktor Gardart",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/viktorgardart/zlatan/issues"
   },
+  "bin": {
+      "zlatan": "index.js"
+  },
+  "preferGlobal": "true",
   "homepage": "https://github.com/viktorgardart/zlatan#readme"
 }
