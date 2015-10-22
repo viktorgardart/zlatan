@@ -12,9 +12,12 @@ $ npm install -g zlatan
 ## Usage
 ```sh
 $ zlatan npm bower
-```
-```sh
 $ zlatan 'first option' 'second option' 'third option'
+```
+
+```js
+var zlatan = require('zlatan');
+console.log(zlatan(['npm', 'bower']))
 ```
 
 ## License
