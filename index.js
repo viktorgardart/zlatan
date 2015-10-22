@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var zlatan = function zlatan(args) {
-    if (!args.length && args.length <= 1) {
+    if (!args.length || args.length <= 1) {
         return 'You need to pass atleast 2 options, eg. `zlatan npm bower`';
     }else {
         var rand = args[Math.floor(Math.random() * args.length)];
