@@ -17,6 +17,7 @@ $ zlatan 'first option' 'second option' 'third option'
 
 ```js
 var zlatan = require('zlatan');
+console.log(zlatan('npm', 'bower'))
 console.log(zlatan(['npm', 'bower']))
 ```
 
