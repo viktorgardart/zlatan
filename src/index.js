@@ -1,13 +1,9 @@
 #!/usr/bin/env node
+var quotes = require('./quotes.js');
 
 var Zlatan = (function() {
     function Zlatan(args) {
-        if (!args.length || args.length <= 1) {
-            return 'You need to pass atleast 2 options, eg. `zlatan npm bower`';
-        }
-
-        var rand = args[Math.floor(Math.random() * args.length)];
-        return rand;
+        return args[Math.floor(Math.random() * args.length)];
     }
 
     return Zlatan;
@@ -24,6 +20,13 @@ function zlatan(args) {
     if (typeof args === 'string') {
         args = Array.prototype.slice.call(arguments, 0);
     }
+    if (typeof args === 'undefined' || !args.length) {
+        /**
+         * Set args to zlatan quoutes if there are no
+         * arguments passed
+         */
+        args = quotes;
+    }
     return Zlatan(args);
 }
 
@@ -32,6 +35,7 @@ exports = module.exports = zlatan;
 /**
  * If runned from terminal excecute directly
  */
-if (process.argv.length > 2) {
+if (process.argv.length >= 2) {
     console.log(zlatan(process.argv.slice(2)));
 }
+
